@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TEAL by Bana — Luxury Beauty Concept</title>
+  <meta name="description" content="Unofficial premium website concept for TEAL by Bana." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="glCanvas" aria-hidden="true"></canvas>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="grain"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="scroll-progress"><span id="scrollProgress"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="TEAL by Bana home">
+      <span class="brand-en">TEAL</span>
+      <span class="brand-ar">تــيــل</span>
+      <span class="brand-by">by Bana</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#experiences">Experiences</a>
+      <a href="#atelier">The Atelier</a>
+      <a href="#locations">Locations</a>
+      <a href="#booking">Book</a>
+    </nav>
+
+    <button class="header-book" data-open-booking>Book an appointment</button>
+  </header>
+
+  <main>
+    <section class="hero-scroll" id="home">
+      <div class="hero-sticky">
+        <div class="hero-backdrop"></div>
+
+        <div class="hero-beauty-stage" aria-hidden="true">
+          <div class="beauty-cluster cluster-left mouse-item" data-depth="16">
+            <div class="hair-fan hf-a"></div>
+            <div class="hair-fan hf-b"></div>
+            <div class="hair-fan hf-c"></div>
+          </div>
+          <div class="beauty-cluster cluster-right mouse-item" data-depth="20">
+            <div class="hair-fan hf-d"></div>
+            <div class="hair-fan hf-e"></div>
+            <div class="hair-fan hf-f"></div>
+          </div>
+          <div class="beauty-orb orb-nail mouse-item" data-depth="12">
+            <span class="orb-label">Nails</span>
+          </div>
+          <div class="beauty-orb orb-makeup mouse-item" data-depth="10">
+            <span class="orb-label">Makeup</span>
+          </div>
+          <div class="beauty-veil mouse-item" data-depth="8"></div>
+          <div class="beauty-powder mouse-item" data-depth="14"></div>
+        </div>
+
+        <div class="hero-copy mouse-item" id="heroCopy" data-depth="6">
+          <div class="hero-kicker">Ladies Only · Dabouq · Khalda</div>
+          <h1 class="hero-title" id="heroTitle">TEAL</h1>
+          <div class="hero-arabic">تــيــل</div>
+          <p class="hero-sub">Where timeless beauty meets <em>Teal artistry.</em></p>
+          <div class="hero-service-line">Hair · Nails · Makeup · Bridal</div>
+          <div class="hero-actions">
+            <button class="cta-primary" data-open-booking>Reserve your moment</button>
+            <a class="cta-text" href="#experiences">Explore the experience <span>↘</span></a>
+          </div>
+        </div>
+
+        <div class="floating-note note-1 mouse-item" data-depth="10">Hair · Color · Finish</div>
+        <div class="floating-note note-2 mouse-item" data-depth="12">Nails · Detail · Shine</div>
+        <div class="floating-note note-3 mouse-item" data-depth="10">Makeup · Bridal · Glow</div>
+
+        <div class="hero-side-copy mouse-item" id="heroSideCopy" data-depth="8">
+          <span>01</span>
+          <p>Beauty, movement and booking — designed as one premium TEAL experience.</p>
+        </div>
+
+        <div class="scroll-cue">
+          <span class="cue-line"></span>
+          <small>Scroll to transform</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-scroll" id="experiences">
+      <div class="experience-sticky">
+        <div class="chapter-copy chapter-copy-1">
+          <span class="section-index">01 / HAIR</span>
+          <h2>Hair should move before you even touch the screen.</h2>
+          <p>Fluid strands, deep shine and a soft editorial palette create a more premium first impression than a traditional salon grid.</p>
+        </div>
+
+        <div class="chapter-copy chapter-copy-2">
+          <span class="section-index">02 / NAILS</span>
+          <h2>Color becomes part of the interaction.</h2>
+          <p>Polish tones shift subtly while layered glass forms rotate in 3D — giving the nails section a jewel-like digital finish.</p>
+        </div>
+
+        <div class="chapter-copy chapter-copy-3">
+          <span class="section-index">03 / MAKEUP & BRIDAL</span>
+          <h2>Softness. Ceremony. A more emotional reveal.</h2>
+          <p>Powder, light and veil-inspired motion create a gentler transition before the user arrives at booking.</p>
+        </div>
+
+        <div class="service-orbit service-orbit-hair mouse-item" data-depth="9">
+          <div class="orbit-card"><span>Hair</span><strong>Cut · Color · Styling</strong></div>
+        </div>
+        <div class="service-orbit service-orbit-nails mouse-item" data-depth="9">
+          <div class="orbit-card"><span>Nails</span><strong>Gloss · Detail · Finish</strong></div>
+        </div>
+        <div class="service-orbit service-orbit-bridal mouse-item" data-depth="9">
+          <div class="orbit-card"><span>Bridal</span><strong>Makeup · Hair · Consultation</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial" id="atelier">
+      <div class="editorial-intro reveal">
+        <span class="eyebrow">The TEAL Atelier</span>
+        <h2>Not a list of services. A sequence of beauty moments.</h2>
+        <p>The final site can use TEAL’s own campaign imagery here. For this proposal, the visual language stays beauty-led: hair, lacquer, powder, veil, glass and light — all tied more clearly to TEAL’s actual field.</p>
+      </div>
+
+      <div class="editorial-grid">
+        <article class="editorial-card card-hair reveal mouse-card" data-depth="6"><div class="card-number">01</div><div class="material material-hair"><span class="hair-line h1"></span><span class="hair-line h2"></span><span class="hair-line h3"></span><span class="hair-line h4"></span><span class="hair-line h5"></span></div><div class="card-copy"><h3>Hair</h3><p>Dimensional color, precision cuts and polished styling.</p></div></article>
+        <article class="editorial-card card-nails reveal mouse-card" data-depth="6"><div class="card-number">02</div><div class="material material-nails"><div class="nail-swatch ns1"></div><div class="nail-swatch ns2"></div><div class="nail-swatch ns3"></div><div class="nail-swatch ns4"></div><div class="nail-highlight"></div></div><div class="card-copy"><h3>Nails</h3><p>High-gloss detail with a controlled, elegant color story.</p></div></article>
+        <article class="editorial-card card-makeup reveal mouse-card" data-depth="6"><div class="card-number">03</div><div class="material material-makeup"><div class="powder-core"></div><div class="powder-halo"></div><div class="powder-specks"></div><div class="brush-form"></div></div><div class="card-copy"><h3>Makeup</h3><p>Soft glow, natural definition and occasion-ready artistry.</p></div></article>
+        <article class="editorial-card card-bridal reveal mouse-card" data-depth="6"><div class="card-number">04</div><div class="material material-bridal"><div class="veil-form"></div><div class="veil-soft-shadow"></div></div><div class="card-copy"><h3>Bridal</h3><p>Consultation-led beauty for the most important moments.</p></div></article>
+      </div>
+    </section>
+
+    <section class="locations" id="locations"><div class="locations-head reveal"><span class="eyebrow">Two TEAL destinations</span><h2>Choose your location.</h2></div><div class="location-panels"><article class="location-panel reveal"><div class="location-meta">Dabouq · Amman</div><h3>Dabouq</h3><p>A calm, premium location experience built around TEAL’s signature service style.</p><button data-open-booking>Book Dabouq</button></article><article class="location-panel reveal"><div class="location-meta">Khalda · Amman</div><h3>Khalda</h3><p>A more convenient city-side booking journey with the same TEAL identity and service language.</p><button data-open-booking>Book Khalda</button></article></div></section>
+
+    <section class="booking-preview" id="booking"><div class="booking-copy reveal"><span class="eyebrow">Digital booking</span><h2>From inspiration to appointment — without leaving the brand.</h2><p>The interaction below is live in this demo. Select a location, service and time to see how the booking flow can feel inside the TEAL visual system.</p></div><div class="booking-shell reveal" id="bookingShell"><div class="booking-steps"><button class="step active" data-step="location"><span>01</span>Location</button><button class="step" data-step="service"><span>02</span>Service</button><button class="step" data-step="time"><span>03</span>Date & time</button><button class="step" data-step="details"><span>04</span>Details</button></div><div class="booking-content" id="bookingContent"></div></div></section>
+
+    <section class="closing" id="cta"><div class="closing-inner reveal"><div class="eyebrow">TEAL by Bana · Concept Proposal</div><h2>Built to feel like a brand launch — not a template.</h2><p>This concept is intentionally presentation-ready: TEAL identity first, cinematic motion second, booking conversion third.</p><button class="cta-primary" data-open-booking>Book your moment</button></div></section>
+  </main>
+
+  <footer class="site-footer"><div>TEAL by Bana · Unofficial Concept Proposal</div><div>0771909091 · info@tealbybana.com</div></footer>
+
+  <div class="booking-modal" id="bookingModal" aria-hidden="true"><div class="modal-backdrop" data-close-booking></div><div class="modal-panel" role="dialog" aria-modal="true" aria-label="TEAL booking demo"><button class="modal-close" data-close-booking aria-label="Close booking">×</button><div class="modal-kicker">TEAL Booking</div><h2>Reserve your moment.</h2><p class="modal-sub">Demo booking flow — final availability would connect to TEAL’s live scheduling system.</p><div class="modal-booking" id="modalBooking"></div></div></div>
+
+  <script src="webgl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
