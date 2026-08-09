@@ -1,0 +1,1 @@
+window.MJ=window.MJ||{};window.MJ_ASSETS=window.MJ_ASSETS||{};if(window.MJ_HERO_PARTS&&window.MJ_HERO_PARTS.length===8){window.MJ_ASSETS['@@A00@@']='data:image/webp;base64,'+window.MJ_HERO_PARTS.join('');}
