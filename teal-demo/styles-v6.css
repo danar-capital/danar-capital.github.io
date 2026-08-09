@@ -1,0 +1,59 @@
+/* ===== V6 enhancements ===== */
+.cursor-glow{position:fixed;left:0;top:0;width:320px;height:320px;margin-left:-160px;margin-top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(85,213,206,.12),rgba(85,213,206,.06) 35%,transparent 70%);filter:blur(12px);pointer-events:none;z-index:1;mix-blend-mode:screen;opacity:.9}
+.hero-beauty-stage{position:absolute;inset:0;z-index:4;pointer-events:none}
+.hero-service-line{margin-top:16px;color:rgba(242,235,227,.72);text-transform:uppercase;letter-spacing:.22em;font-size:.76rem}
+.beauty-cluster{position:absolute;inset:auto;will-change:transform}
+.cluster-left{left:-2%;top:18%;width:37vw;height:46vh;max-width:520px;max-height:420px}
+.cluster-right{right:-4%;top:24%;width:34vw;height:42vh;max-width:480px;max-height:380px}
+.hair-fan{position:absolute;border-radius:50%;background:linear-gradient(132deg,rgba(6,7,9,.98),rgba(109,118,122,.52),rgba(11,12,15,.96));box-shadow:inset 0 0 18px rgba(255,255,255,.05),0 20px 44px rgba(0,0,0,.35)}
+.hf-a{width:96%;height:14%;left:-12%;top:18%;transform:rotate(-20deg);animation:fanWave 8s ease-in-out infinite}
+.hf-b{width:88%;height:13%;left:4%;top:36%;transform:rotate(8deg);animation:fanWave 7.5s ease-in-out infinite -2s}
+.hf-c{width:80%;height:11%;left:10%;top:56%;transform:rotate(20deg);animation:fanWave 8.7s ease-in-out infinite -3.2s}
+.hf-d{width:94%;height:14%;right:-12%;top:10%;transform:rotate(16deg);animation:fanWave 8.2s ease-in-out infinite -1.2s}
+.hf-e{width:82%;height:12%;right:4%;top:36%;transform:rotate(-6deg);animation:fanWave 7.6s ease-in-out infinite -2.3s}
+.hf-f{width:72%;height:11%;right:9%;top:60%;transform:rotate(-18deg);animation:fanWave 8.5s ease-in-out infinite -4s}
+.beauty-orb{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(10,14,16,.72),rgba(13,34,35,.36));backdrop-filter:blur(8px);box-shadow:0 16px 34px rgba(0,0,0,.26),inset 0 0 22px rgba(255,255,255,.03);display:grid;place-items:end center;overflow:hidden}
+.beauty-orb::before{content:"";position:absolute;inset:12% 12% auto 12%;height:48%;border-radius:50%;background:radial-gradient(circle at 50% 30%,rgba(255,255,255,.28),transparent 60%)}
+.orb-label{position:relative;z-index:2;margin-bottom:12px;color:rgba(242,235,227,.78);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+.orb-nail{right:15%;bottom:18%;width:138px;height:138px;background:linear-gradient(180deg,rgba(10,14,16,.72),rgba(28,94,101,.38))}
+.orb-makeup{left:16%;bottom:20%;width:110px;height:110px;background:linear-gradient(180deg,rgba(13,18,19,.68),rgba(178,139,118,.24))}
+.beauty-veil{position:absolute;right:8%;bottom:-4%;width:30vw;height:46vh;max-width:420px;max-height:420px;background:linear-gradient(135deg,rgba(242,235,227,.18),rgba(242,235,227,.04),transparent 62%);clip-path:polygon(8% 2%,38% 0,74% 9%,100% 27%,92% 58%,76% 83%,43% 100%,9% 86%,0 58%,18% 46%,36% 32%,48% 19%,32% 10%);filter:blur(1px);opacity:.55;animation:veilFloat 9s ease-in-out infinite}
+.beauty-powder{position:absolute;left:16%;top:16%;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(99,225,217,.48),rgba(42,143,142,.12) 34%,transparent 72%);filter:blur(18px);opacity:.55;animation:powderPulseSoft 5s ease-in-out infinite}
+.mouse-item,.mouse-card{will-change:transform}
+.material-hair .h5{width:66%;left:16%;top:70%;transform:rotate(-12deg);animation-delay:-3s}
+.nail-highlight{position:absolute;inset:auto 10% 14% auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(85,213,206,.28),transparent 65%);filter:blur(12px)}
+.powder-specks{position:absolute;inset:22% 18% auto auto;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(85,213,206,.22),transparent 10%),radial-gradient(circle at 56% 44%,rgba(242,235,227,.18),transparent 4%),radial-gradient(circle at 34% 70%,rgba(85,213,206,.14),transparent 5%),radial-gradient(circle at 72% 58%,rgba(242,235,227,.14),transparent 6%);filter:blur(1px)}
+.veil-soft-shadow{position:absolute;inset:auto 4% 10% auto;width:220px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(178,139,118,.16),transparent 68%);filter:blur(10px)}
+.editorial-card::after{content:"";position:absolute;inset:auto 0 0 0;height:48%;background:linear-gradient(180deg,transparent,rgba(5,7,8,.72));z-index:1}
+.card-copy{z-index:6}
+.material{z-index:0}
+.card-number{z-index:6}
+.location-panel::after{content:"";position:absolute;left:24px;right:24px;bottom:24px;height:1px;background:linear-gradient(90deg,rgba(85,213,206,.24),transparent)}
+@keyframes fanWave{0%,100%{translate:0 0;opacity:.92}50%{translate:10px -10px;opacity:1}}
+@keyframes veilFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+@keyframes powderPulseSoft{0%,100%{transform:scale(.94);opacity:.42}50%{transform:scale(1.08);opacity:.72}}
+@media(max-width:980px){
+  .cluster-left{left:-6%;top:22%;width:48vw;height:30vh}
+  .cluster-right{right:-8%;top:28%;width:44vw;height:28vh}
+  .orb-nail{right:9%;bottom:18%;width:116px;height:116px}
+  .orb-makeup{left:10%;bottom:16%;width:94px;height:94px}
+  .beauty-powder{left:10%;top:12%;width:180px;height:180px}
+}
+@media(max-width:680px){
+  .cursor-glow{display:none}
+  .hero-beauty-stage{opacity:.92}
+  .cluster-left,.cluster-right{width:60vw;height:18vh;max-height:none}
+  .cluster-left{left:-16%;top:18%}
+  .cluster-right{right:-20%;top:30%}
+  .orb-nail{right:5%;bottom:24%;width:88px;height:88px}
+  .orb-makeup{left:4%;bottom:18%;width:72px;height:72px}
+  .beauty-veil{right:-8%;bottom:2%;width:42vw;height:24vh;opacity:.46}
+  .beauty-powder{left:2%;top:14%;width:130px;height:130px;opacity:.46}
+  .hero-service-line{font-size:.62rem;letter-spacing:.18em}
+  .site-header{width:var(--max)}
+  .editorial-card{overflow:hidden}
+  .material-nails{gap:10px}.nail-swatch{width:38px;height:154px}.ns2{height:170px}.ns3{height:144px}.ns4{height:162px}
+}
+@media(hover:none) and (pointer:coarse){
+  .hero-beauty-stage .mouse-item,.mouse-card .material{transform:none !important}
+}
