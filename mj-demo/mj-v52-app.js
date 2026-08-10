@@ -1,0 +1,51 @@
+(()=>{
+ const q=(s,r=document)=>r.querySelector(s),qa=(s,r=document)=>[...r.querySelectorAll(s)],clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*t,ease=t=>1-Math.pow(1-clamp(t),3);
+ const coarse=matchMedia('(hover:none) and (pointer:coarse)').matches, reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const header=q('#header'),progress=q('#progress'),heroScroll=q('.hero-scroll'),exp=q('.experience-scroll'),bg1=q('.hero-bg'),bg2=q('.hero-bg2'),heroCopy=q('#heroCopy'),heroSide=q('#heroSide'),scenes=qa('.scene'),orbits=qa('.orbit'),floats=qa('.floating'),cursor=q('#cursor');
+ const salon={
+  'photo-01':'./assets/images/photo-01.avif?v=52','photo-02':'./assets/images/photo-02.avif?v=52',
+  'photo-04':'./assets/images/photo-04.avif?v=52','photo-05':'./assets/images/photo-05.avif?v=52',
+  'photo-06':'./assets/images/photo-06.avif?v=52','photo-07':'./assets/images/photo-07.avif?v=52','photo-08':'./assets/images/photo-08.avif?v=52'};
+ const teamPos={'photo-09':['0%','0%'],'photo-10':['50%','0%'],'photo-11':['100%','0%'],'photo-12':['0%','100%'],'photo-13':['50%','100%'],'photo-14':['100%','100%']};
+ const paint=(el,key)=>{
+  if(!el)return;
+  if(salon[key]){el.style.backgroundImage=`url("${salon[key]}")`;el.style.backgroundSize='cover';el.style.backgroundPosition='center';el.style.backgroundRepeat='no-repeat';}
+  else if(key==='photo-03'&&window.MJ?.LOGO){el.style.backgroundImage=`url("${window.MJ.LOGO}")`;el.style.backgroundSize='cover';el.style.backgroundPosition='center';el.style.backgroundRepeat='no-repeat';}
+  else if(teamPos[key]&&window.MJ?.TEAM){el.style.backgroundImage=`url("${window.MJ.TEAM}")`;el.style.backgroundSize='300% 200%';el.style.backgroundPosition=`${teamPos[key][0]} ${teamPos[key][1]}`;el.style.backgroundRepeat='no-repeat';}
+ };
+ qa('[data-img]').forEach(el=>paint(el,el.dataset.img));
+ if(window.MJ?.HERO){bg1.style.backgroundImage=`linear-gradient(90deg,rgba(4,7,11,.91) 0%,rgba(4,7,11,.62) 48%,rgba(4,7,11,.36) 100%),url("${window.MJ.HERO}")`;bg1.style.backgroundSize='cover';bg1.style.backgroundPosition='center';bg1.style.backgroundRepeat='no-repeat';}
+ else paint(bg1,'photo-01');
+ bg2.style.backgroundImage=`linear-gradient(90deg,rgba(4,7,11,.36),rgba(4,7,11,.76)),url("${salon['photo-02']}")`;bg2.style.backgroundSize='cover';bg2.style.backgroundPosition='center';bg2.style.backgroundRepeat='no-repeat';
+ let tx=0,ty=0,mx=0,my=0,px=innerWidth/2,py=innerHeight/2;
+ addEventListener('pointermove',e=>{px=e.clientX;py=e.clientY;tx=(px/innerWidth-.5)*2;ty=(py/innerHeight-.5)*2},{passive:true});
+ const sp=el=>{const r=el.getBoundingClientRect(),t=Math.max(1,el.offsetHeight-innerHeight);return clamp(-r.top/t)};
+ const page=()=>{const m=document.documentElement.scrollHeight-innerHeight;return m>0?scrollY/m:0};
+ function hero(){
+  const p=sp(heroScroll),mix=clamp((p-.1)/.52),out=clamp((p-.66)/.29);
+  bg1.style.opacity=1-mix*.82;bg1.style.transform=`scale(${1+p*.07}) translate3d(0,${-p*28}px,0)`;
+  bg2.style.opacity=mix;bg2.style.transform=`scale(${1.08-mix*.035}) translate3d(0,${-mix*16}px,0)`;
+  heroCopy.style.transform=`translate3d(${mx*13}px,${-mix*48+my*9}px,0) scale(${1+mix*.03})`;heroCopy.style.opacity=1-out*.88;heroCopy.style.filter=`blur(${out*7}px)`;
+  heroSide.style.transform=`translate3d(${mx*22}px,${mix*28+my*12}px,0)`;heroSide.style.opacity=1-out*.68;
+  floats.forEach((f,i)=>f.style.transform=`translate3d(${mx*(9+i*3)+(i===0?-mix*55:mix*(i===1?56:34))}px,${my*(7+i*2)+(i===1?-mix*30:mix*12)}px,0)`);
+ }
+ function experience(){
+  const p=sp(exp),n=scenes.length,s=p*n;
+  scenes.forEach((el,i)=>{const l=s-i,en=ease(clamp(l/.44)),ou=ease(clamp((l-.64)/.36)),op=clamp(en*(1-ou)),dir=i===1?1:-1,x=(i===2?mx*14:lerp(dir*60,0,en)+dir*ou*35+mx*12),y=(i===2?my*8:lerp(20,0,en)-ou*14+my*7);el.style.opacity=op;el.style.filter=`blur(${(1-en)*9+ou*7}px)`;el.style.transform=i===2?`translate(-50%,-50%) translate3d(${x}px,${y}px,0) scale(${.95+en*.05})`:`translate3d(${x}px,${y}px,0) scale(${.95+en*.05})`});
+  orbits.forEach((o,i)=>{const c=(i+.46)/n,d=Math.abs(p-c),v=clamp(1-d/.19),ph=(p-c)*Math.PI*4;o.style.opacity=.12+v*.88;o.style.transform=`translate3d(${Math.sin(ph)*32+mx*9}px,${Math.cos(ph)*24+my*9}px,0) rotate(${Math.sin(ph)*2.5}deg) scale(${.92+v*.08})`})
+ }
+ function frame(){mx=lerp(mx,tx,.075);my=lerp(my,ty,.075);progress.style.width=page()*100+'%';header.classList.toggle('scrolled',scrollY>18);if(cursor)cursor.style.transform=`translate3d(${px}px,${py}px,0)`;hero();experience();if(!reduced)requestAnimationFrame(frame)} frame();
+ const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.13});qa('.reveal').forEach(e=>io.observe(e));
+ qa('.tilt,.member').forEach(card=>{card.addEventListener('pointermove',e=>{if(matchMedia('(hover:none)').matches)return;const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateY(${x*4}deg) rotateX(${-y*4}deg) translateY(-2px)`});card.addEventListener('pointerleave',()=>card.style.transform='')});
+ const pc=q('#particles'),ctx=pc.getContext('2d');let dots=[];function resizeP(){const d=Math.min(devicePixelRatio||1,coarse?1.25:2);pc.width=Math.max(1,Math.round(innerWidth*d));pc.height=Math.max(1,Math.round(innerHeight*d));pc.style.width=innerWidth+'px';pc.style.height=innerHeight+'px';ctx.setTransform(d,0,0,d,0,0);const count=coarse?Math.min(32,Math.max(20,Math.round(innerWidth/16))):Math.min(100,Math.max(45,Math.round(innerWidth/18)));dots=Array.from({length:count},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:.4+Math.random()*1.2,vx:(Math.random()-.5)*.13,vy:(Math.random()-.5)*.13,a:.07+Math.random()*.25,red:Math.random()>.55}))}function particles(){if(document.hidden||reduced)return requestAnimationFrame(particles);ctx.clearRect(0,0,innerWidth,innerHeight);dots.forEach(d=>{d.x+=d.vx;d.y+=d.vy;if(d.x<0)d.x=innerWidth;if(d.x>innerWidth)d.x=0;if(d.y<0)d.y=innerHeight;if(d.y>innerHeight)d.y=0;const dist=coarse?999:Math.hypot(d.x-px,d.y-py),b=dist<170?(1-dist/170)*.25:0;ctx.beginPath();ctx.fillStyle=d.red?`rgba(244,93,98,${d.a+b})`:`rgba(210,220,234,${d.a*.7+b})`;ctx.arc(d.x,d.y,d.r+b*2,0,Math.PI*2);ctx.fill()});requestAnimationFrame(particles)}resizeP();if(!reduced)particles();addEventListener('resize',resizeP,{passive:true});
+ const state={service:'Hair Care',time:'7:30 PM',name:'',phone:''},book=q('#booking'),steps=qa('.step');let step=0;
+ const opt=(label,sub,val)=>`<button class="option ${state.service===val?'selected':''}" data-service="${val}"><strong>${label}</strong><small>${sub}</small></button>`;
+ function render(){
+  steps.forEach((b,i)=>b.classList.toggle('active',i===step));
+  if(step===0)book.innerHTML=`<h3>اختر الخدمة</h3><p>حدد الخدمة التي تريد حجزها.</p><div class="options">${opt('العناية بالشعر','Cut · Styling · Treatment','Hair Care')}${opt('العناية بالبشرة','Grooming facial','Skin Care')}${opt('العناية بالأظافر','Detail care','Nail Care')}${opt('البكجات','Full grooming package','Package')}</div><div class="next"><button class="primary" data-next>متابعة</button></div>`;
+  if(step===1)book.innerHTML=`<h3>اختر الوقت</h3><p>الأوقات هنا للعرض؛ النسخة النهائية ترتبط بالتوافر الحقيقي.</p><div class="times">${['1:00 PM','4:00 PM','7:30 PM','9:00 PM'].map(t=>`<button class="time ${state.time===t?'selected':''}" data-time="${t}">${t}</button>`).join('')}</div><div class="next"><button class="primary" data-next>متابعة</button></div>`;
+  if(step===2)book.innerHTML=`<h3>بياناتك</h3><p>أكمل بيانات الحجز.</p><div class="inputs"><input id="name" autocomplete="name" value="${state.name}" placeholder="الاسم الكامل"><input id="phone" inputmode="tel" autocomplete="tel" value="${state.phone}" placeholder="رقم الهاتف"></div><div class="summary"><b>${state.service}</b><br>${state.time} · MJ Hair Salon</div><div class="next"><button class="primary" data-confirm>تأكيد الحجز التجريبي</button></div>`;
+  qa('[data-service]',book).forEach(b=>b.onclick=()=>{state.service=b.dataset.service;render()});qa('[data-time]',book).forEach(b=>b.onclick=()=>{state.time=b.dataset.time;render()});q('[data-next]',book)?.addEventListener('click',()=>{step=Math.min(2,step+1);render()});q('[data-confirm]',book)?.addEventListener('click',()=>{const name=q('#name',book),phone=q('#phone',book);state.name=name?.value.trim()||'';state.phone=phone?.value.trim()||'';if(!state.name||state.phone.replace(/\D/g,'').length<7){const target=!state.name?name:phone;target?.focus();target?.classList.add('input-error');return}book.innerHTML=`<div class="summary"><b>تم حجز الموعد التجريبي.</b><br>${state.service} · ${state.time}<br>${state.name} · ${state.phone}<br><small>Demo only — لم يتم إنشاء حجز فعلي.</small></div>`})
+ }steps.forEach((b,i)=>b.onclick=()=>{step=i;render()});render();
+ const modal=q('#modal'),mc=q('#modalContent');function openModal(){mc.innerHTML=`<p style="color:var(--muted);line-height:1.8">اختر الخدمة كبداية، وبعد الموافقة يمكن ربط هذا التدفق بنظام MJ الفعلي.</p><div class="options">${['Hair Care','Skin Care','Nail Care','Package'].map(s=>`<button class="option" data-ms="${s}"><strong>${s}</strong><small>MJ service</small></button>`).join('')}</div>`;modal.classList.add('open');document.body.style.overflow='hidden';qa('[data-ms]',mc).forEach(b=>b.onclick=()=>{state.service=b.dataset.ms;mc.innerHTML=`<div class="summary"><b>${state.service}</b><br>Choose a time from the full booking section below.<br><br><a href="#contact" class="primary" style="display:inline-flex" data-close>Continue</a></div>`;q('[data-close]',mc)?.addEventListener('click',close)})}function close(){modal.classList.remove('open');document.body.style.overflow=''}qa('[data-book]').forEach(b=>b.onclick=openModal);qa('[data-close]').forEach(b=>b.onclick=close);addEventListener('keydown',e=>e.key==='Escape'&&close());
+})();
