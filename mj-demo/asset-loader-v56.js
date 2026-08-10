@@ -1,7 +1,7 @@
 (()=>{
  const root=document.documentElement;
  const fetchJoin=async files=>(await Promise.all(files.map(async p=>{const r=await fetch(p,{cache:'force-cache'});if(!r.ok)throw new Error(p+' '+r.status);return r.text()}))).join('');
- const team=Array.from({length:4},(_,i)=>`./mj-v51-team-${String(i).padStart(2,'0')}.txt?v=56`);
+ const team=['./mj-v51-team-00.txt?v=56','./mj-v51-team-01.txt?v=56','./mj-v51-team-02a.txt?v=56','./mj-v51-team-02b.txt?v=56','./mj-v51-team-03.txt?v=56'];
  let started=false;
  async function loadTeam(){
   if(started)return; started=true;
