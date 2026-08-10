@@ -1,0 +1,1 @@
+window.MJ_ASSETS=window.MJ_ASSETS||{};(function(){var b='/mj-demo/';var f=['hero-hq-01.js','hero-hq-02full.js','hero-hq-03.js','hero-hq-04.js','hero-hq-05.js','hero-hq-06.js','hero-hq-07a.js','hero-hq-07b.js','hero-hq-07c.js','hero-hq-08.js','hero-hq-init.js'];for(var i=0;i<f.length;i++){document.write('<script src="'+b+f[i]+'?v=48"><\/script>');}})();
