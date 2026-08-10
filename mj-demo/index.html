@@ -2,104 +2,109 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#06080b">
-<title>MJ Hair Salon — Premium Grooming Experience</title>
-<meta name="description" content="MJ Hair Salon by Mustafa Al-Khateeb — premium interactive concept optimized for mobile.">
-<link rel="stylesheet" href="styles.css?v=48">
-<link rel="stylesheet" href="mobile-v53.css?v=53">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070a0e">
+
+<title>MJ Hair Salon by Mustafa Al-Khateeb</title>
+<meta name="description" content="MJ Hair Salon — premium grooming experience in Amman.">
+<link rel="stylesheet" href="./mj-v51-a.css?v=54">
+<link rel="stylesheet" href="./mj-v51-b.css?v=54">
 <script>window.MJ=window.MJ||{};</script>
-<script src="a00.js?v=48"></script>
-<script src="hero-hq-01.js?v=48"></script>
-<script src="hero-hq-02full.js?v=48"></script>
-<script src="hero-hq-03.js?v=48"></script>
-<script src="hero-hq-04.js?v=48"></script>
-<script src="hero-hq-05.js?v=48"></script>
-<script src="hero-hq-06.js?v=48"></script>
-<script src="hero-hq-07a.js?v=48"></script>
-<script src="hero-hq-07b.js?v=48"></script>
-<script src="hero-hq-07c.js?v=48"></script>
-<script src="hero-hq-08.js?v=48"></script>
-<script src="hero-hq-init.js?v=48"></script>
-<script src="logo.js?v=48"></script>
-<script src="team.js?v=48"></script>
+<script src="./hero-hq-01.js?v=54"></script>
+<script src="./hero-hq-02full.js?v=54"></script>
+<script src="./hero-hq-03.js?v=54"></script>
+<script src="./hero-hq-04.js?v=54"></script>
+<script src="./hero-hq-05.js?v=54"></script>
+<script src="./hero-hq-06.js?v=54"></script>
+<script src="./hero-hq-07a.js?v=54"></script>
+<script src="./hero-hq-07b.js?v=54"></script>
+<script src="./hero-hq-07c.js?v=54"></script>
+<script src="./hero-hq-08.js?v=54"></script>
+<script src="./hero-hq-init.js?v=54"></script>
+<script src="./logo.js?v=54"></script>
+<script src="./team.js?v=54"></script>
 </head>
 <body>
-<canvas id="gl" aria-hidden="true"></canvas>
-<canvas id="dust" aria-hidden="true"></canvas>
-<div class="grain" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"></div>
-<div class="progress"><i id="prog"></i></div>
+<canvas id="gl"></canvas><canvas id="particles"></canvas><div class="grain"></div><div class="cursor" id="cursor"></div><div class="progress"><i id="progress"></i></div>
 <header id="header">
-  <a class="brand" href="#home" aria-label="MJ Hair Salon home">
-    <div class="brand-mark"><img id="headLogo" alt="MJ Hair Salon logo"><span>MJ</span></div>
-    <div><strong>MJ Hair Salon</strong><small>by Mustafa Al-Khateeb</small></div>
-  </a>
-  <nav><a href="#experience">Experience</a><a href="#inside">Inside MJ</a><a href="#services">Services</a><a href="#team">Team</a></nav>
-  <button class="book" data-book>احجز الآن</button>
+ <a class="brand" href="#home"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-03" fetchpriority="high" alt="MJ Hair Salon logo" width="1080" height="1080" decoding="async"><span class="brand-text"><strong>MJ Hair Salon</strong><span>by Mustafa Al-Khateeb</span></span></a>
+ <nav><a href="#experience">Experience</a><a href="#services">Services</a><a href="#team">Team</a><a href="#contact">Contact</a></nav>
+ <button class="book" data-book>احجز الآن</button>
 </header>
 <main>
-  <section class="hero-scroll" id="home">
-    <div class="hero">
-      <div class="hero-media" id="heroMedia"></div>
-      <div class="hero-shade"></div>
-      <div class="hero-depth" aria-hidden="true"><i class="rail rail-a"></i><i class="rail rail-b"></i><i class="rail rail-c"></i></div>
-      <div class="hero-inner">
-        <div class="hero-copy" id="heroCopy">
-          <span class="kicker">MJ Hair Salon · Amman</span>
-          <h1>MJ <small>HAIR SALON</small></h1>
-          <p>تجربة grooming راقية تبدأ من المكان الحقيقي لـ MJ — هوية قوية، حركة ثلاثية الأبعاد، وحجز سريع مصمم للجوال والكمبيوتر.</p>
-          <div class="pills"><span>Hair</span><span>Skin</span><span>Nails</span><span>Packages</span></div>
-          <div class="actions"><button class="primary" data-book>Reserve a session</button><a class="secondary" href="#experience">استكشف التجربة <b>↓</b></a></div>
-        </div>
-        <div class="hero-side" id="heroSide">
-          <div class="glass-card brand-card"><div class="brand-card-logo"><img id="heroLogo" alt="MJ logo"><span>MJ</span></div><div><small>PREMIUM GROOMING</small><strong>Built around the real MJ identity.</strong></div></div>
-          <div class="glass-card status"><div><small>OPEN DAILY</small><strong>11:00 AM — 10:00 PM</strong></div><div><small>LOCATION</small><strong>Qrayyat Street · Amman</strong></div></div>
-        </div>
-      </div>
-      <div class="float-chip f1">Real MJ location</div><div class="float-chip f2">Interactive 3D</div><div class="float-chip f3">Mobile first</div>
-      <div class="scrollcue"><span></span>SCROLL TO DISCOVER</div>
-    </div>
-  </section>
-  <section class="experience-scroll" id="experience">
-    <div class="experience">
-      <div class="experience-eyebrow">MJ / DIGITAL EXPERIENCE</div>
-      <div class="scene s1"><b>01 / ARRIVAL</b><h2>المكان الحقيقي هو أول انطباع.</h2><p>بدل صورة عامة، الواجهة تبدأ من مبنى MJ نفسه والهوية الموجودة على الأرض، ثم تدخل الحركة الرقمية حوله.</p></div>
-      <div class="scene s2"><b>02 / CRAFT</b><h2>3D يتحرك معك، مش خلفية ساكنة.</h2><p>الخيوط المعدنية والزجاجية تستجيب للسكرول والماوس بعمق محسوب بدون ما تثقل الصفحة.</p></div>
-      <div class="scene s3"><b>03 / CONVERSION</b><h2>من الإعجاب إلى الحجز خلال ثوانٍ.</h2><p>كل قسم يقود للحجز بشكل طبيعي، مع تجربة واضحة وسريعة على الموبايل.</p></div>
-      <div class="experience-marker m1"><span>01</span><em>Identity</em></div><div class="experience-marker m2"><span>02</span><em>Motion</em></div><div class="experience-marker m3"><span>03</span><em>Booking</em></div>
-    </div>
-  </section>
-  <section class="section craft" id="inside">
-    <div class="section-head reveal"><span class="eyebrow">The MJ craft</span><h2>تفاصيل من مجالهم تتحرك داخل الهوية.</h2><p>بدل موشن عام، العناصر هنا مأخوذة من عالم الـgrooming نفسه: المقص، المشط، الماكينة، والعناية.</p></div>
-    <div class="craft-grid">
-      <article class="craft-card reveal tilt"><div class="tool tool-clipper"><span></span><i></i><b></b></div><div><span>01 / PRECISION</span><h3>Hair & Fade</h3><p>حركة معدنية محسوبة مرتبطة بالماوس، مثل أداة العمل نفسها.</p></div></article>
-      <article class="craft-card reveal tilt"><div class="tool tool-scissor"><i class="ring rA"></i><i class="ring rB"></i><span class="blade bA"></span><span class="blade bB"></span><b></b></div><div><span>02 / DETAIL</span><h3>Scissor work</h3><p>أشكال واضحة من المجال، بدون تحويل الموقع إلى قالب صالونات جاهز.</p></div></article>
-      <article class="craft-card reveal tilt"><div class="tool tool-comb"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><span>03 / STYLE</span><h3>Shape & Style</h3><p>خطوط وإيقاع بصري مستوحى من المشط والتصفيف.</p></div></article>
-      <article class="craft-card reveal tilt"><div class="tool tool-care"><span></span><i></i><b></b></div><div><span>04 / CARE</span><h3>Skin & Finish</h3><p>إضاءة ناعمة تعكس جانب العناية ضمن تجربة MJ.</p></div></article>
-    </div>
-  </section>
-  <section class="section" id="services">
-    <div class="section-head reveal"><span class="eyebrow">Our services</span><h2>خدمات MJ، بشكل أقرب لبراند فاخر.</h2><p>المحتوى يتحول من قائمة خدمات إلى تجربة مرئية واضحة، مع CTA مباشر للحجز.</p></div>
-    <div class="services">
-      <article class="service reveal"><img loading="lazy" data-photo="photo-05" alt="MJ hair grooming"><div class="service-tag">01</div><div class="service-copy"><h3>العناية بالشعر</h3><p>قص، تصفيف وعناية متخصصة.</p><button data-book>Book hair</button></div></article>
-      <article class="service reveal"><img loading="lazy" data-photo="photo-06" alt="MJ skin care"><div class="service-tag">02</div><div class="service-copy"><h3>العناية بالبشرة</h3><p>جلسات grooming وتنظيف وعناية.</p><button data-book>Book skin</button></div></article>
-      <article class="service reveal"><img loading="lazy" data-photo="photo-07" alt="MJ nail care"><div class="service-tag">03</div><div class="service-copy"><h3>العناية بالأظافر</h3><p>تفاصيل نظيفة ضمن تجربة متكاملة.</p><button data-book>Book nails</button></div></article>
-      <article class="service reveal"><img loading="lazy" data-photo="photo-05" alt="MJ premium grooming"><div class="service-tag">04</div><div class="service-copy"><h3>البكجات</h3><p>خدمات مجمّعة بحجز أسهل وأوضح.</p><button data-book>Book package</button></div></article>
-    </div>
-  </section>
-  <section class="section" id="team">
-    <div class="section-head reveal"><span class="eyebrow">Meet the team</span><h2>فريق MJ الحقيقي.</h2><p>الوجوه الحقيقية أهم من أي stock photography، لذلك الفريق يبقى جزءًا رئيسيًا من تجربة الموقع.</p></div>
-    <div class="team"><article class="member reveal"><div class="avatar m0"></div><h3>M7m7</h3><p>Team member</p></article><article class="member reveal"><div class="avatar m1"></div><h3>Baha</h3><p>Team member</p></article><article class="member reveal"><div class="avatar m2"></div><h3>Amro</h3><p>Team member</p></article><article class="member reveal"><div class="avatar m3"></div><h3>Ali</h3><p>Team member</p></article><article class="member featured reveal"><div class="avatar m4"></div><h3>Mustafa</h3><p>Founder · Creative direction</p></article><article class="member reveal"><div class="avatar m5"></div><h3>Osaid</h3><p>Team member</p></article><article class="member reveal"><div class="avatar initial">M</div><h3>Mera</h3><p>Team member</p></article><article class="member reveal"><div class="avatar initial">A</div><h3>Aows</h3><p>Team member</p></article></div>
-  </section>
-  <section class="section contact" id="contact">
-    <div class="card visit reveal"><span class="eyebrow">Visit MJ</span><h2>Qrayyat Street, Amman</h2><p>من الانطباع الأول إلى الموعد، داخل نفس التجربة.</p><div class="facts"><div><span>Phone</span><strong>0797799677</strong></div><div><span>Hours</span><strong>11:00am — 10:00pm</strong></div><div><span>Focus</span><strong>Hair · Skin · Nails</strong></div></div></div>
-    <div class="card booking-card reveal"><div class="steps"><button class="step active" data-s="0">01 Service</button><button class="step" data-s="1">02 Slot</button><button class="step" data-s="2">03 Details</button></div><div id="booking"></div></div>
-  </section>
-  <section class="section closing"><div class="closing-card reveal"><span class="eyebrow">MJ Hair Salon · Concept Demo</span><h2>Designed to feel like the real MJ — just more digital.</h2><p>النسخة النهائية يمكن ربطها بنظام المواعيد والخدمات والعملاء، مع الحفاظ على نفس التجربة البصرية.</p><button class="primary" data-book>احجز تجربة</button></div></section>
+<section class="hero-scroll" id="home"><div class="hero">
+ <div class="hero-bg"></div><div class="hero-bg2"></div><div class="hero-shade"></div>
+ <div class="ribbons" aria-hidden="true"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span></div>
+ <div class="hero-inner">
+  <div class="hero-copy" id="heroCopy">
+   <span class="kicker">MJ HAIR SALON · PREMIUM GROOMING EXPERIENCE</span>
+   <h1>MJ<small>HAIR SALON</small></h1>
+   <p>إطلالة محسوبة، عناية متكاملة، وتجربة رجالية مصممة لتفاصيلك — من أول قصّة شعر إلى اللمسة الأخيرة.</p>
+   <div class="pills"><span>العناية بالشعر</span><span>العناية بالبشرة</span><span>العناية بالأظافر</span><span>البكجات</span></div>
+   <div class="actions"><button class="primary" data-book>Reserve a session</button><a class="secondary" href="#experience">استكشف التجربة <b>↓</b></a></div>
+  </div>
+  <div class="hero-side" id="heroSide">
+   <div class="logo-stage"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-03" alt="MJ logo" width="1080" height="1080" decoding="async"></div>
+   <div class="status"><div class="status-main"><strong>11:00am — 10:00pm</strong><small>Sunday · Open now</small></div><div class="mini-photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-01" alt="MJ Hair Salon" width="1600" height="900" decoding="async"></div></div>
+  </div>
+ </div>
+ <div class="floating f1">High-end interior</div><div class="floating f2">Hair · Skin · Nails</div><div class="floating f3">Qrayyat Street · Amman</div>
+ <div class="scroll-cue"><i></i><small>SCROLL TO DISCOVER</small></div>
+</div></section>
+
+<section class="experience-scroll" id="experience"><div class="experience">
+ <article class="scene one"><span>01 / ARRIVAL</span><h2>حضور قوي من أول ثانية.</h2><p>هوية MJ الجريئة تظهر قبل أي شيء آخر: الشعار، الموقع، الألوان، والإحساس بالمكان — بشكل بصري أنظف وأكثر فخامة.</p></article>
+ <article class="scene two"><span>02 / CRAFT</span><h2>الخدمة نفسها تصبح جزءًا من القصة.</h2><p>الصور والحركة تتغير مع السكرول بدل عرض الخدمات كقائمة جامدة، حتى يشعر الزائر بمستوى التجربة قبل أن يحجز.</p></article>
+ <article class="scene three"><span>03 / BOOKING</span><h2>من الانبهار إلى الحجز بخطوات قليلة.</h2><p>كل الحركة تقود في النهاية إلى قرار واضح: اختيار الخدمة، الوقت، وإرسال بيانات الحجز بدون تشتيت.</p></article>
+ <div class="orbit o1"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-02" alt="" width="1600" height="900" decoding="async"><div><strong>Signature identity</strong><small>MJ visual language</small></div></div>
+ <div class="orbit o2"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-04" alt="" width="1600" height="900" decoding="async"><div><strong>Premium interior</strong><small>Red panels · metal finish</small></div></div>
+ <div class="orbit o3"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-05" alt="" width="1100" height="900" decoding="async"><div><strong>Precision craft</strong><small>Hair care · detail</small></div></div>
+</div></section>
+
+<section class="section" id="services">
+ <div class="section-head reveal"><span class="eyebrow">OUR SERVICES</span><h2>الخدمة المناسبة لكل تفصيلة.</h2><p>صور واقعية من تجربة MJ الحالية، مع تقديم بصري أكثر قوة ووضوحًا.</p></div>
+ <div class="services">
+  <article class="service reveal tilt"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-05" alt="Hair care" width="1100" height="900" decoding="async"><div class="service-copy"><small>01 / HAIR</small><h3>العناية بالشعر</h3><p>قص، تحديد، تصفيف وعناية نهائية بتفاصيل دقيقة.</p></div></article>
+  <article class="service reveal tilt"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-06" alt="Skin care" width="1100" height="900" decoding="async"><div class="service-copy"><small>02 / SKIN</small><h3>العناية بالبشرة</h3><p>جلسة grooming متكاملة تمنح البشرة مظهرًا أنظف وأكثر انتعاشًا.</p></div></article>
+  <article class="service reveal tilt"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-07" alt="Nail care area" width="1600" height="900" decoding="async"><div class="service-copy"><small>03 / DETAIL</small><h3>العناية بالأظافر</h3><p>اهتمام بالتفاصيل الصغيرة ضمن تجربة راحة وعناية متكاملة.</p></div></article>
+  <article class="service reveal tilt"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-08" alt="MJ salon interior" width="1600" height="900" decoding="async"><div class="service-copy"><small>04 / PACKAGES</small><h3>البكجات</h3><p>خدمات مجمعة لتجربة grooming كاملة في زيارة واحدة.</p></div></article>
+ </div>
+</section>
+
+<section class="section">
+ <div class="section-head reveal"><span class="eyebrow">THE SPACE</span><h2>المكان جزء من التجربة.</h2><p>تفاصيل MJ الداخلية نفسها تستحق أن تكون عنصرًا أساسيًا في الموقع، وليس مجرد صورة صغيرة في الخلفية.</p></div>
+ <div class="gallery">
+  <figure class="big reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-04" alt="MJ interior" width="1600" height="900" decoding="async"></figure>
+  <figure class="reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-02" alt="MJ branded interior" width="1600" height="900" decoding="async"></figure>
+  <figure class="reveal"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-01" alt="MJ exterior" width="1600" height="900" decoding="async"></figure>
+  <figure class="reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-07" alt="MJ lounge" width="1600" height="900" decoding="async"></figure>
+  <figure class="reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-08" alt="MJ stations" width="1600" height="900" decoding="async"></figure>
+ </div>
+</section>
+
+<section class="section" id="team">
+ <div class="section-head reveal"><span class="eyebrow">MEET THE TEAM</span><h2>فريق MJ.</h2><p>نفس الفريق المعروض حاليًا عندهم، لكن بطريقة أنظف وأكثر Premium.</p></div>
+ <div class="team-grid">
+  <article class="member reveal"><div class="initial">M</div><h3>Mera</h3><p>Team member</p></article>
+  <article class="member reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-09" alt="M7m7" width="640" height="640" decoding="async"><h3>M7m7</h3><p>Team member</p></article>
+  <article class="member reveal"><div class="initial">A</div><h3>Aows</h3><p>Team member</p></article>
+  <article class="member reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-10" alt="Baha" width="640" height="640" decoding="async"><h3>Baha</h3><p>Team member</p></article>
+  <article class="member reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-11" alt="Amro" width="640" height="640" decoding="async"><h3>Amro</h3><p>Team member</p></article>
+  <article class="member reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-12" alt="Ali" width="640" height="640" decoding="async"><h3>Ali</h3><p>Team member</p></article>
+  <article class="member owner reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-13" alt="Mustafa" width="640" height="640" decoding="async"><h3>Mustafa</h3><p>Founder · Creative direction</p></article>
+  <article class="member reveal"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="photo-14" alt="Osaid" width="640" height="640" decoding="async"><h3>Osaid</h3><p>Team member</p></article>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="contact-card reveal"><span class="eyebrow">VISIT MJ</span><h2>Qrayyat Street, Amman</h2><p>احجز تجربتك واختَر الخدمة والوقت المناسب لك.</p><div class="facts"><div class="fact"><b>Phone</b><span>0797799677</span></div><div class="fact"><b>Hours</b><span>11:00am — 10:00pm</span></div><div class="fact"><b>Services</b><span>Hair · Skin · Nails</span></div></div></div>
+ <div class="booking reveal"><div class="steps"><button class="step active" data-step="0">01 Service</button><button class="step" data-step="1">02 Time</button><button class="step" data-step="2">03 Details</button></div><div class="booking-content" id="booking"></div></div>
+</section>
 </main>
-<footer class="footer"><span>MJ Hair Salon by Mustafa Al-Khateeb — Concept Proposal</span><span>Interactive web experience · v53</span></footer>
-<script src="mj-v51-webgl.js?v=53"></script>
-<script src="app-v53.js?v=53"></script>
-</body>
-</html>
+<footer><span>MJ Hair Salon by Mustafa Al-Khateeb</span><span>Mobile optimized · v54 · Demo booking only</span></footer>
+
+<div class="modal" id="modal"><div class="modal-backdrop" data-close></div><div class="modal-card"><button class="close" data-close>×</button><span class="eyebrow">MJ BOOKING</span><h2>احجز موعدك</h2><div id="modalContent"></div></div></div>
+
+<script src="./mj-v54-app.js?v=54" defer></script>
+<script src="./mj-v51-webgl.js?v=54" defer></script>
+</body></html>
