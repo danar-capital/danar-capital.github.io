@@ -1,0 +1,12 @@
+/* v55 hero quality fix: mobile-specific source + single-layer composition */
+.hero-bg{background-color:#070a0e;background-repeat:no-repeat;background-size:cover;background-position:center center;filter:saturate(1.01) contrast(1.035)}
+@media(max-width:700px){
+  .hero-bg{background-position:center top!important;filter:saturate(1.03) contrast(1.045)!important;transform:translateZ(0)!important}
+  .hero-bg2{display:none!important;opacity:0!important}
+  .hero-side{display:none!important}
+  .hero-shade{background:linear-gradient(180deg,rgba(4,7,11,.08) 0%,rgba(4,7,11,.18) 42%,rgba(4,7,11,.58) 72%,rgba(4,7,11,.88) 100%)!important}
+  .hero-copy{padding-top:10px!important;text-shadow:0 2px 22px rgba(0,0,0,.38)}
+  .hero-copy p{color:rgba(255,255,255,.96)}
+  #gl{opacity:.46!important}#particles{opacity:.22!important}.grain{opacity:.012!important}
+  .ribbons{opacity:.52}
+}
