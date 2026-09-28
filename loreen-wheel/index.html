@@ -128,7 +128,7 @@ function wrap(angle){return ((angle%360)+360)%360}
 function normDelta(angle){return ((angle+540)%360)-180}
 function numberAr(value){return value.toLocaleString("ar-JO")}
 prizes.forEach(function(prize,index){
-  const start=index*segmentAngle,end=(index+1)*segmentAngle,mid=(start+end)/2;
+  const start=index*segmentAngle-segmentAngle/2,end=(index+1)*segmentAngle-segmentAngle/2,mid=(start+end)/2;
   sectors.push({prize:prize,start:start,end:end});
   const p1=polar(228,start),p2=polar(228,end),path=document.createElementNS(svgNS,"path");
   path.setAttribute("d","M 250 250 L "+p1[0]+" "+p1[1]+" A 228 228 0 0 1 "+p2[0]+" "+p2[1]+" Z");
@@ -138,9 +138,9 @@ prizes.forEach(function(prize,index){
   const studPoint=polar(228,start),stud=document.createElementNS(svgNS,"circle");
   stud.setAttribute("cx",studPoint[0]);stud.setAttribute("cy",studPoint[1]);stud.setAttribute("r","5.3");stud.setAttribute("fill","#fff3d8");stud.setAttribute("stroke","#a77b3e");stud.setAttribute("stroke-width","1.7");studs.appendChild(stud)
 });
-let current=-segmentAngle/2,busy=false,drag=null,soundOn=true,audioContext=null,lastTickIndex=0;
+let current=0,busy=false,drag=null,soundOn=true,audioContext=null,lastTickIndex=0;
 wheel.style.transform="rotate("+current+"deg)";
-function sectorAtPointer(){const angle=wrap(-current);for(let i=0;i<sectors.length;i++){if(angle>=sectors[i].start&&angle<sectors[i].end)return i}return sectors.length-1}
+function sectorAtPointer(){const angle=wrap(-current+segmentAngle/2);return Math.min(sectors.length-1,Math.floor(angle/segmentAngle))}
 function vibrate(pattern){if(typeof navigator!=="undefined"&&typeof navigator.vibrate==="function"){try{navigator.vibrate(pattern)}catch{}}}
 function tone(frequency,duration,volume,delay){
   if(!soundOn)return;
