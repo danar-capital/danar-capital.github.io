@@ -1,37 +1,245 @@
 <!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#f8f3eb"><meta name="description" content="عجلة لورين التفاعلية — لفّي واربح خصم على الليزر"><link rel="manifest" href="./manifest.json"><link rel="icon" href="./icon.svg"><title>لفّي واربح | لورين</title><style>
-
-:root{--ink:#5e3334;--gold:#b58a4a;--cream:#faf6ef;--rose:#ae7478;--mauve:#8c6968;--sage:#989078;--shadow:0 16px 50px #563b3030}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Tahoma,Arial,sans-serif;color:var(--ink);background:radial-gradient(ellipse at 50% 35%,#fffdf9 0,#f7f0e8 55%,#eee3d7 100%);overscroll-behavior:none}body{min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,32px);overflow-x:hidden}.app{width:min(100%,1120px);min-height:min(94dvh,920px);display:grid;grid-template-columns:1fr .92fr;align-items:center;gap:clamp(14px,3vw,42px);padding:clamp(18px,4vw,46px);border:1px solid #c9a56d77;border-radius:32px;background:#fffaf3c9;box-shadow:var(--shadow);position:relative;overflow:hidden}.app:before{content:"";position:absolute;inset:9px;border:1px solid #c9a56d55;border-radius:25px;pointer-events:none}.copy{text-align:center;z-index:1}.brand{display:flex;justify-content:center;margin-bottom:4px}.brand img{width:92px;height:92px;filter:drop-shadow(0 4px 6px #8f6c3e24)}.eyebrow{font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;letter-spacing:.13em;font-size:clamp(13px,1.5vw,17px);color:#92724c;margin:0 0 8px}.title{font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;font-size:clamp(34px,5vw,64px);line-height:1.08;margin:0;color:#62383a;font-weight:700}.subtitle{font-size:clamp(17px,2vw,23px);font-weight:700;color:#947347;margin:9px 0 20px}.tagline{font-size:15px;color:#8f7770;line-height:1.7;margin:0 auto 18px;max-width:340px}.spinbtn,.secondary{border:0;font:inherit;cursor:pointer;touch-action:manipulation}.spinbtn{min-height:66px;width:min(100%,330px);border-radius:999px;color:#fff9ef;font-size:22px;font-weight:800;background:linear-gradient(135deg,#c29a5a,#9d7138);box-shadow:0 9px 22px #906b3c45,inset 0 1px 0 #fff8;transition:transform .15s,filter .2s}.spinbtn:active{transform:scale(.97)}.spinbtn:disabled{opacity:.6;cursor:wait}.hint{font-size:13px;color:#9b8c80;margin:11px 0 0}.gesture{width:min(100%,350px);margin:14px auto 0;padding:13px 18px;border:1px solid #c29a5a;border-radius:18px;background:linear-gradient(120deg,#fff8ed,#f3e6d4);color:#795936;box-shadow:0 5px 15px #8a69401c}.gesture strong{display:block;font-size:19px}.gesture span{display:block;font-size:12px;color:#9b8571;margin-top:4px}.pricecard{width:min(100%,370px);margin:20px auto 0;padding:16px 20px;border:1px solid #c39b60;border-radius:18px;background:#fffaf2;text-align:right}.price-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:7px 0;color:#78665a}.price-row+ .price-row{border-top:1px solid #decba9}.price-row strong{color:#6c4440}.price-row.final{font-size:19px;font-weight:800;color:#603738}.price-row.final strong{font-size:26px;color:#9c713c}.result .spinbtn{margin-top:18px}.notes{margin:21px auto 0;max-width:350px;border-top:1px solid #bd9b6a5c;padding-top:15px;font-size:14px;line-height:1.8;color:#7c6961}.notes strong{color:#79543d}.controls{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}.secondary{padding:10px 15px;border-radius:999px;background:#fff8ef;border:1px solid #c9a56d75;color:#75593e;font-size:13px}.wheelbox{width:min(100%,min(72vw,650px));justify-self:center;position:relative;z-index:1;aspect-ratio:1;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}.wheelbox.dragging{cursor:grabbing}.wheel{width:100%;height:100%;filter:drop-shadow(0 9px 15px #6e4e2f30);transition:none;will-change:transform;pointer-events:none;user-select:none}.pointer{position:absolute;z-index:3;top:-2.2%;left:50%;transform:translateX(-50%);width:0;height:0;border-left:clamp(18px,2.7vw,28px) solid transparent;border-right:clamp(18px,2.7vw,28px) solid transparent;border-top:clamp(38px,5vw,54px) solid #a4773c;filter:drop-shadow(0 3px 2px #4e321a4d)}.pointer:after{content:"";position:absolute;top:3px;left:calc(clamp(18px,2.7vw,28px)*-1 + 4px);width:0;height:0;border-left:calc(clamp(18px,2.7vw,28px) - 4px) solid transparent;border-right:calc(clamp(18px,2.7vw,28px) - 4px) solid transparent;border-top:calc(clamp(38px,5vw,54px) - 9px) solid #f6e6c8}.overlay{position:fixed;inset:0;z-index:9;display:none;align-items:center;justify-content:center;padding:22px;background:#271d1c88;backdrop-filter:blur(5px)}.overlay.show{display:flex}.result{width:min(92vw,500px);text-align:center;border-radius:28px;padding:34px 25px;background:linear-gradient(150deg,#fffdf7,#f5e9da);border:2px solid #c49d60;box-shadow:0 20px 75px #170f0e70;animation:pop .4s cubic-bezier(.2,.9,.2,1.2)}@keyframes pop{from{transform:scale(.75);opacity:0}to{transform:scale(1);opacity:1}}.result .small{font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;color:#977648;letter-spacing:.12em}.result h2{font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;font-size:clamp(26px,6vw,38px);margin:8px 0;color:#62383a}.discount{font-size:clamp(78px,19vw,116px);font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;font-weight:bold;line-height:1;color:#a67b40;text-shadow:0 3px 0 #e7d4ae;margin:3px}.result p{color:#806e61;line-height:1.7}.result .spinbtn{margin-top:12px}.footer{font-size:11px;color:#a09082;margin-top:16px}
-@media(max-width:760px){body{padding:0}.app{min-height:100dvh;width:100%;border-radius:0;border:0;grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:5px;padding:calc(12px + env(safe-area-inset-top)) 20px calc(14px + env(safe-area-inset-bottom));align-content:center}.app:before{inset:8px;border-radius:0}.copy{grid-row:1}.brand img{width:65px;height:65px}.title{font-size:clamp(33px,9vw,48px)}.subtitle{margin:4px 0 8px}.tagline{font-size:14px;margin-bottom:12px}.notes{margin-top:10px;padding-top:8px;line-height:1.55}.wheelbox{width:min(86vw,56dvh,480px);grid-row:2}.spinbtn{min-height:58px}.hint{margin:7px 0 0}.controls{margin-top:8px}.notes .desktop{display:none}}
-@media(max-height:700px) and (orientation:landscape){.app{grid-template-columns:1fr 1fr;min-height:100dvh;padding:12px 26px;gap:15px}.brand img{width:54px;height:54px}.title{font-size:36px}.subtitle{margin:4px}.tagline{margin:5px auto;font-size:13px}.notes{margin-top:8px;padding-top:8px}.wheelbox{width:min(75vh,44vw,470px)}}
-@media(prefers-reduced-motion:reduce){.wheel{transition-duration:1s}.result{animation:none}}
-</style></head><body><main class="app"><section class="copy"><div class="brand"><img src="./icon.svg" alt="شعار لورين"></div><p class="eyebrow">LOREEN MEDICAL CLINIC</p><h1 class="title">لفّي واربح</h1><p class="subtitle">خصم مميز على الليزر</p><p class="tagline">جربي حظك واكتشفي هديتك من لورين<br>عناية تليق بجمالك… بشكل طبيعي</p><div class="gesture"><strong>اسحبي العجلة بإيدك ✨</strong><span>لفّيها بإصبعك أو بالماوس واتركيها تكمل الدوران</span></div><p class="hint" id="hint">المسي العجلة واسحبيها لتبدأ اللفة</p><div class="notes"><strong>الخصم خاص بخدمات الليزر</strong><br><span>باقة الجسم الكامل — ٤ جلسات: ١٠٠ د.أ قبل الخصم</span><br><span class="desktop">L O R E E N · ENHANCING YOU, NATURALLY</span></div><div class="controls"><button class="secondary" id="sound" aria-pressed="true">🔊 الصوت يعمل</button><button class="secondary" id="full">⛶ ملء الشاشة</button><button class="secondary" id="install" hidden>＋ تثبيت التطبيق</button></div></section><section class="wheelbox" id="wheelbox" aria-label="اسحبي العجلة بيدك للفوز بخصم الليزر"><div class="pointer"></div><svg id="wheel" class="wheel" viewBox="0 0 500 500" role="img" aria-label="عجلة خصومات ٤٠ و٥٠ و٦٠ و١٠٠ بالمئة"><defs><radialGradient id="hub"><stop stop-color="#fffdf7"/><stop offset=".8" stop-color="#f2e6d7"/><stop offset="1" stop-color="#c29a5a"/></radialGradient><linearGradient id="gold"><stop stop-color="#f2dfb9"/><stop offset=".5" stop-color="#aa7e42"/><stop offset="1" stop-color="#f7e8c9"/></linearGradient></defs><circle cx="250" cy="250" r="244" fill="url(#gold)"/><circle cx="250" cy="250" r="236" fill="#fff8ee"/><g id="segments"></g><circle cx="250" cy="250" r="236" fill="none" stroke="#bd965a" stroke-width="4"/><circle cx="250" cy="250" r="219" fill="none" stroke="#dfc99f" stroke-width="1.6"/><g id="studs"></g><circle cx="250" cy="250" r="60" fill="url(#hub)" stroke="#ad8145" stroke-width="4"/><circle cx="250" cy="250" r="51" fill="none" stroke="#e2c998" stroke-width="1.5"/><image href="./icon.svg" x="211" y="210" width="78" height="78"/></svg></section></main><div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="won"><div class="result"><div class="small">LOREEN MEDICAL CLINIC</div><h2 id="won">مبروك! هديتك من لورين</h2><div class="discount" id="discountBig">٤٠٪</div><p>خصمك على باقة الجسم الكامل — ٤ جلسات ليزر</p><div class="pricecard"><div class="price-row"><span>السعر قبل الخصم</span><strong>١٠٠ د.أ</strong></div><div class="price-row"><span>نسبة الخصم</span><strong id="discount">٤٠٪</strong></div><div class="price-row final"><span>السعر بعد الخصم</span><strong id="finalPrice">٦٠ د.أ</strong></div></div><p>أبرزي هذه النتيجة لفريق لورين للاستفادة من العرض.</p><button class="spinbtn" id="again">إغلاق</button><div class="footer">ENHANCING YOU, NATURALLY</div></div></div><script>const prizes=[40,40,50,40,50,100,40,50,60,60];
-const rareAngle=10, normalAngle=(360-rareAngle)/9;
-const colors=['#f7eee2','#ae7778','#d9c6ae','#856b68','#f3e8d7','#d5b16f','#a77478','#e5d7c4','#927675','#eee1cf'];
-const svgNS='http://www.w3.org/2000/svg', group=document.querySelector('#segments'), studs=document.querySelector('#studs');
-const wheel=document.querySelector('#wheel'), wheelbox=document.querySelector('#wheelbox'), hint=document.querySelector('#hint'), overlay=document.querySelector('#overlay');
-const sectors=[];let cursor=0;
-function polar(r,a){let t=(a-90)*Math.PI/180;return [250+r*Math.cos(t),250+r*Math.sin(t)]}
-function wrap(a){return ((a%360)+360)%360}
-function normDelta(a){return ((a+540)%360)-180}
-prizes.forEach((prize,i)=>{const size=prize===100?rareAngle:normalAngle,a0=cursor,a1=cursor+size,mid=(a0+a1)/2;sectors.push({prize,start:a0,end:a1,size});const p1=polar(228,a0),p2=polar(228,a1);let path=document.createElementNS(svgNS,'path');path.setAttribute('d',`M 250 250 L ${p1[0]} ${p1[1]} A 228 228 0 ${size>180?1:0} 1 ${p2[0]} ${p2[1]} Z`);path.setAttribute('fill',prize===100?'url(#gold)':colors[i]);path.setAttribute('stroke',prize===100?'#896234':'#bd985c');path.setAttribute('stroke-width',prize===100?'2.8':'2');group.appendChild(path);let [x,y]=polar(prize===100?145:148,mid),label=document.createElementNS(svgNS,'text');label.setAttribute('x',x);label.setAttribute('y',y);label.setAttribute('text-anchor','middle');label.setAttribute('dominant-baseline','central');label.setAttribute('font-family','Georgia,serif');label.setAttribute('font-weight','bold');label.setAttribute('fill',prize===100?'#593c21':([1,3,6,8].includes(i)?'#fff9f0':'#633c39'));label.setAttribute('font-size',prize===100?'16':'36');if(prize===100){let rotation=mid-90;if(rotation>90)rotation-=180;if(rotation< -90)rotation+=180;label.setAttribute('transform',`rotate(${rotation} ${x} ${y})`)}label.textContent=prize+'%';group.appendChild(label);let [sx,sy]=polar(226,a0),stud=document.createElementNS(svgNS,'circle');stud.setAttribute('cx',sx);stud.setAttribute('cy',sy);stud.setAttribute('r','5.5');stud.setAttribute('fill','#f8eccf');stud.setAttribute('stroke','#a77b3e');stud.setAttribute('stroke-width','2');studs.appendChild(stud);cursor=a1});
-let current=-normalAngle/2,busy=false,drag=null,soundOn=true,ctx=null,lastTickIndex=-1;
-wheel.style.transform=`rotate(${current}deg)`;
-function sectorAtPointer(){const a=wrap(-current);return sectors.findIndex(s=>a>=s.start-1e-7&&a<s.end-1e-7)===-1?sectors.length-1:sectors.findIndex(s=>a>=s.start-1e-7&&a<s.end-1e-7)}
-function vibrate(pattern){if(navigator.vibrate)navigator.vibrate(pattern)}
-function tone(freq=720,dur=.035,vol=.03){if(!soundOn)return;try{ctx ||= new (window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')ctx.resume().catch(()=>{});let o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=freq;o.type='sine';g.gain.setValueAtTime(vol,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+dur);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+dur)}catch{}}
-function tickIfChanged(){const ix=sectorAtPointer();if(ix!==lastTickIndex){lastTickIndex=ix;vibrate(9);tone(650,.025,.018)}}
-function setWheel(){wheel.style.transform=`rotate(${current}deg)`;tickIfChanged()}
-function announceResult(){const prize=sectors[sectorAtPointer()].prize,pay=Math.round(100*(1-prize/100)),discount=prize.toLocaleString('ar-JO')+'٪',price=pay.toLocaleString('ar-JO')+' د.أ'+(pay===0?' — مجاناً':'');document.querySelector('#discountBig').textContent=discount;document.querySelector('#discount').textContent=discount;document.querySelector('#finalPrice').textContent=price;overlay.classList.add('show');vibrate([35,50,65]);tone(880,.16,.055);hint.textContent='تم تسجيل النتيجة — أغلقيها للزائرة التالية'}
-function finishSpin(){busy=false;current=wrap(current);wheel.style.transform=`rotate(${current}deg)`;announceResult()}
-function startInertia(speed){busy=true;hint.textContent='العجلة تدور…';vibrate(18);tone(520,.08,.05);let velocity=speed,prev=performance.now(),began=prev;function frame(now){const dt=Math.min(40,now-prev);prev=now;current+=velocity*dt;setWheel();velocity*=Math.exp(-dt/1400);if(Math.abs(velocity)>.014&&now-began<7000)requestAnimationFrame(frame);else finishSpin()}requestAnimationFrame(frame)}
-function pointerAngle(e){const r=wheel.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;return Math.atan2(e.clientY-cy,e.clientX-cx)*180/Math.PI}
-wheelbox.addEventListener('pointerdown',e=>{if(busy||overlay.classList.contains('show'))return;const a=pointerAngle(e);drag={id:e.pointerId,lastAngle:a,lastTime:performance.now(),velocity:0,total:0,travel:0,lastX:e.clientX,lastY:e.clientY,startX:e.clientX,startY:e.clientY};wheelbox.setPointerCapture(e.pointerId);wheelbox.classList.add('dragging');tone(460,.04,.02);hint.textContent='اسحبي بسرعة ثم اتركي العجلة تكمل الدوران'});
-wheelbox.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;const now=performance.now(),a=pointerAngle(e),delta=normDelta(a-drag.lastAngle),dt=Math.max(1,now-drag.lastTime);drag.total+=delta;drag.travel+=Math.hypot(e.clientX-drag.lastX,e.clientY-drag.lastY);drag.lastX=e.clientX;drag.lastY=e.clientY;const sample=delta/dt;drag.velocity=drag.velocity*.35+sample*.65;drag.lastAngle=a;drag.lastTime=now;current+=delta;setWheel()});
-function releaseDrag(e){if(!drag||e.pointerId!==drag.id)return;const d=drag;drag=null;wheelbox.classList.remove('dragging');if(wheelbox.hasPointerCapture(e.pointerId))wheelbox.releasePointerCapture(e.pointerId);if(d.travel<8||Math.abs(d.total)<6){hint.textContent='اسحبي العجلة بإيدك واتركيها لتلفّ';return}const direction=Math.sign(d.velocity)||Math.sign(d.total)||1;const speed=direction*Math.min(1.65,Math.max(.32,Math.abs(d.velocity)));startInertia(speed)}
-wheelbox.addEventListener('pointerup',releaseDrag);wheelbox.addEventListener('pointercancel',()=>{drag=null;wheelbox.classList.remove('dragging')});
-document.querySelector('#again').addEventListener('click',()=>overlay.classList.remove('show'));overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.classList.remove('show')});document.addEventListener('keydown',e=>{if(e.key==='Escape')overlay.classList.remove('show')});
-document.querySelector('#sound').addEventListener('click',e=>{soundOn=!soundOn;e.currentTarget.textContent=soundOn?'🔊 الصوت يعمل':'🔇 الصوت مغلق';e.currentTarget.setAttribute('aria-pressed',soundOn);tone(700,.05)});
-document.querySelector('#full').addEventListener('click',async()=>{try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen()}catch{hint.textContent='لأفضل عرض، اختاري ملء الشاشة من إعدادات المتصفح'}});
-let installPrompt;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;document.querySelector('#install').hidden=false});document.querySelector('#install').addEventListener('click',async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}else hint.textContent='على iPad: اضغطي مشاركة ثم إضافة إلى الشاشة الرئيسية'});if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
-if('wakeLock'in navigator){let lock;const request=async()=>{try{lock=await navigator.wakeLock.request('screen')}catch{}};request();document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')request()})}</script></body></html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#3a2b31">
+  <meta name="description" content="لفّي عجلة لورين واكتشفي خصمك الحقيقي على باقة الليزر">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg">
+  <title>لفّي واربح | لورين</title>
+<style>
+:root{color-scheme:light;--wine:#56373e;--deep:#39282f;--gold:#b58a4d;--gold-light:#ead3a8;--cream:#fbf5eb;--rose:#ad747b;--muted:#89766f;--shadow:0 30px 90px #170e1680}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Tahoma,Arial,sans-serif}
+body{min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:clamp(14px,3vw,38px);overflow-x:hidden;background:radial-gradient(ellipse at 11% 13%,#a8786740 0,transparent 30rem),radial-gradient(ellipse at 91% 85%,#9f68733a 0,transparent 31rem),radial-gradient(ellipse at 50% 50%,#574148 0,#3c2b32 57%,#30242b 100%);color:var(--wine);overscroll-behavior:none}
+body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.19;background:repeating-linear-gradient(133deg,transparent 0 17px,#ebd2a90a 18px 19px,transparent 20px 36px)}
+.ambient{position:fixed;z-index:0;width:min(34vw,390px);height:auto;opacity:.2;pointer-events:none;filter:drop-shadow(0 0 24px #d8b78325)}
+.ambient path,.ambient ellipse,.ambient circle{stroke:#dfc18a;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ambient .petal{fill:#c79592;fill-opacity:.16}
+.ambient.top{inset-inline-start:-6vw;top:-7vh;transform:rotate(-16deg)}
+.ambient.bottom{inset-inline-end:-7vw;bottom:-10vh;transform:rotate(165deg)}
+.app{position:relative;z-index:1;width:min(100%,1200px);min-height:min(91dvh,940px);display:grid;grid-template-columns:.96fr 1.04fr;align-items:center;gap:clamp(20px,4vw,54px);padding:clamp(26px,4vw,54px);border:1px solid #d0ad716e;border-radius:36px;background:radial-gradient(ellipse at 12% 6%,#fffdf9d9,transparent 45%),linear-gradient(135deg,#fff8eef5 0%,#f6e9d9f2 49%,#edddd2f7 100%);box-shadow:var(--shadow);overflow:hidden;isolation:isolate}
+.app:before,.app:after{content:"";position:absolute;z-index:-1;pointer-events:none}
+.app:before{inset:9px;border:1px solid #c6a46b70;border-radius:28px}
+.app:after{width:300px;height:300px;left:-150px;bottom:-180px;border:1px solid #b18a5630;border-radius:50%;box-shadow:0 0 0 18px #b18a5607,0 0 0 36px #b18a5606,0 0 0 54px #b18a5604}
+.copy{text-align:center;position:relative;z-index:1}
+.brand{display:flex;justify-content:center;margin:0 auto 6px}
+.brand img{width:clamp(68px,8vw,100px);height:auto;filter:drop-shadow(0 7px 10px #8f6c3e35)}
+.eyebrow{font-family:Georgia,"Times New Roman",serif;letter-spacing:.18em;font-size:clamp(11px,1.2vw,15px);color:#95754e;margin:0 0 8px}
+.title{font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;font-size:clamp(40px,5.3vw,68px);line-height:1.02;margin:0;color:#56353c;font-weight:700}
+.subtitle{font-size:clamp(18px,2vw,24px);font-weight:800;color:#997044;margin:10px 0 9px}
+.tagline{font-size:clamp(13px,1.2vw,16px);color:#89736c;line-height:1.8;margin:0 auto 17px;max-width:390px}
+.gesture{width:min(100%,380px);margin:0 auto;padding:13px 18px;border:1px solid #bd965c;border-radius:17px;background:linear-gradient(120deg,#fff8ed,#efe0cc);color:#765936;box-shadow:0 8px 22px #8a69401b}
+.gesture strong{display:block;font-size:clamp(17px,1.8vw,21px)}
+.gesture span{display:block;font-size:12px;color:#94806d;margin-top:4px}
+.hint{min-height:22px;font-size:13px;color:#9a8576;margin:9px 0 10px}
+.trust{width:min(100%,380px);display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto;padding:9px 12px;border:1px solid #bd965c5c;border-radius:14px;background:#fff9f0a8;color:#795c3a}
+.trust-mark{display:grid;place-items:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#b88d50;color:white;font-size:15px;font-weight:bold}
+.trust p{margin:0;font-size:12px;line-height:1.6;text-align:right}
+.trust strong{font-size:13px;color:#65443a}
+.notes{margin:15px auto 0;max-width:385px;font-size:13px;line-height:1.8;color:#7d6a62}
+.notes strong{color:#76563d}
+.base-price{display:inline-flex;align-items:center;gap:6px;margin-top:2px;padding:4px 11px;border-radius:999px;background:#765c4b12;color:#795b41;font-weight:bold}
+.controls{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.secondary{min-height:40px;padding:9px 14px;border-radius:999px;background:#fff8ef;border:1px solid #c9a56d85;color:#725637;font:inherit;font-size:12px;font-weight:700;cursor:pointer;touch-action:manipulation;box-shadow:0 3px 9px #785d3d10;transition:transform .15s,background .2s}
+.secondary:active{transform:scale(.97)}
+.secondary:focus-visible,.spinbtn:focus-visible,.wheelbox:focus-visible{outline:3px solid #aa7d3e;outline-offset:4px}
+.wheel-side{position:relative;z-index:1;display:grid;place-items:center}
+.wheelbox{width:min(100%,min(45vw,680px));aspect-ratio:1;position:relative;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab;outline:none}
+.wheelbox.dragging{cursor:grabbing}
+.wheelbox.bump{animation:tick-bump .085s ease-out}
+@keyframes tick-bump{0%{transform:translateX(0)}35%{transform:translateX(1px)}70%{transform:translateX(-.7px)}100%{transform:translateX(0)}}
+.wheel{width:100%;height:100%;display:block;transform-origin:50% 50%;filter:drop-shadow(0 15px 18px #49302a3d);will-change:transform;pointer-events:none}
+.pointer{position:absolute;z-index:3;top:-1.4%;left:50%;transform:translateX(-50%);width:0;height:0;border-left:clamp(19px,2.8vw,30px) solid transparent;border-right:clamp(19px,2.8vw,30px) solid transparent;border-top:clamp(39px,5vw,56px) solid #99713d;filter:drop-shadow(0 4px 3px #3d281a66)}
+.pointer:after{content:"";position:absolute;top:3px;left:calc(clamp(19px,2.8vw,30px)*-1 + 4px);width:0;height:0;border-left:calc(clamp(19px,2.8vw,30px) - 4px) solid transparent;border-right:calc(clamp(19px,2.8vw,30px) - 4px) solid transparent;border-top:calc(clamp(39px,5vw,56px) - 10px) solid #f7e8c9}
+.wheel-caption{position:absolute;bottom:-22px;inset-inline:0;text-align:center;color:#876b50;font-size:12px;letter-spacing:.02em}
+.overlay{position:fixed;inset:0;z-index:9;display:none;align-items:center;justify-content:center;padding:20px;background:#21171bc7;backdrop-filter:blur(8px)}
+.overlay.show{display:flex}
+.result{width:min(92vw,490px);max-height:calc(100dvh - 28px);overflow:auto;text-align:center;border-radius:27px;padding:clamp(23px,4vw,36px) clamp(20px,4vw,30px);background:radial-gradient(ellipse at 50% 0,#fffefb,transparent 59%),linear-gradient(150deg,#fff9ef,#f0e1d1);border:2px solid #c49d60;box-shadow:0 25px 85px #170f0e80;animation:pop .38s cubic-bezier(.2,.9,.2,1.15)}
+@keyframes pop{from{transform:scale(.94) translateY(8px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.result .small{font-family:Georgia,"Times New Roman",serif;color:#977648;letter-spacing:.15em;font-size:13px}
+.result h2{font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;font-size:clamp(26px,6vw,38px);margin:8px 0;color:#62383a}
+.discount{font-size:clamp(70px,18vw,112px);font-family:"Traditional Arabic","Noto Naskh Arabic",Georgia,serif;font-weight:bold;line-height:1;color:#a67b40;text-shadow:0 3px 0 #e7d4ae;margin:4px}
+.result-intro{color:#806e61;line-height:1.65;margin:7px auto 13px}
+.pricecard{width:min(100%,380px);margin:14px auto 0;padding:14px 19px;border:1px solid #c39b60;border-radius:17px;background:#fffaf2;text-align:right}
+.price-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:7px 0;color:#78665a}
+.price-row+.price-row{border-top:1px solid #decba9}
+.price-row strong{color:#6c4440}
+.price-row.final{font-size:18px;font-weight:800;color:#603738}
+.price-row.final strong{font-size:25px;color:#9c713c}
+.fairness-note{font-size:12px!important;color:#8a766c!important;line-height:1.7;margin:13px auto 3px}
+.spinbtn{width:min(100%,320px);min-height:56px;margin:12px auto 0;border:0;border-radius:999px;color:#fff9ef;font:inherit;font-size:20px;font-weight:800;background:linear-gradient(135deg,#c29a5a,#946839);box-shadow:0 9px 22px #906b3c3d,inset 0 1px 0 #fff8;cursor:pointer;touch-action:manipulation;transition:transform .15s}
+.spinbtn:active{transform:scale(.98)}
+.footer{font-size:10px;color:#a09082;margin-top:13px;letter-spacing:.06em}
+@media(max-width:820px){body{min-height:100svh;align-items:flex-start;padding:0}.ambient{width:min(44vw,260px);opacity:.12}.app{min-height:100svh;width:100%;grid-template-columns:1fr;grid-template-rows:auto auto;align-content:center;gap:clamp(12px,2.3vh,22px);padding:calc(13px + env(safe-area-inset-top)) clamp(15px,4vw,28px) calc(16px + env(safe-area-inset-bottom));border:0;border-radius:0;background:radial-gradient(ellipse at 9% 0,#fffdf9eb,transparent 45%),linear-gradient(145deg,#fff8eef5,#efdfd1f7 80%)}.app:before{inset:7px;border-radius:0}.brand{margin-bottom:3px}.brand img{width:clamp(55px,8.5vw,74px)}.eyebrow{font-size:11px;margin-bottom:4px}.title{font-size:clamp(35px,8vw,49px)}.subtitle{font-size:clamp(17px,4vw,21px);margin:4px 0 5px}.tagline{font-size:13px;line-height:1.55;margin-bottom:11px}.gesture{padding:10px 15px}.gesture strong{font-size:17px}.gesture span{font-size:11px}.hint{min-height:18px;font-size:12px;margin:6px 0 8px}.trust{padding:7px 10px}.trust p{font-size:11px}.trust strong{font-size:12px}.notes{margin-top:8px;font-size:12px;line-height:1.55}.controls{margin-top:9px;gap:7px}.secondary{min-height:38px;padding:8px 12px}.wheelbox{width:min(86vw,52dvh,530px)}.wheel-caption{bottom:-20px;font-size:11px}}
+@media(max-width:430px){.app{gap:10px;padding-inline:14px}.brand img{width:53px}.title{font-size:35px}.tagline{margin-bottom:9px}.gesture{padding:9px 12px}.notes{font-size:11px}.wheelbox{width:min(87vw,46dvh,400px)}}
+@media(max-height:720px) and (orientation:landscape) and (min-width:821px){.app{min-height:96dvh;padding:18px 32px;gap:24px}.brand img{width:58px}.title{font-size:39px}.subtitle{margin:5px}.tagline{margin:6px auto;font-size:13px}.gesture{padding:8px 14px}.hint{margin:5px}.trust{padding:5px 10px}.notes{margin-top:8px}.controls{margin-top:8px}.wheelbox{width:min(72vh,43vw,460px)}}
+@media(prefers-reduced-motion:reduce){.result{animation:none}.secondary,.spinbtn{transition:none}.wheelbox.bump{animation:none}}
+</style>
+</head>
+<body>
+<svg class="ambient top" viewBox="0 0 320 420" aria-hidden="true"><path d="M25 392C82 315 108 236 136 150S204 41 295 17"/><path d="M78 318C35 304 23 264 50 238c39 10 50 40 28 80Z" class="petal"/><path d="M99 263c-4-42 24-68 59-62 6 37-13 62-59 62Z" class="petal"/><path d="M126 194c-43-6-58-38-40-72 38 3 59 31 40 72Z" class="petal"/><path d="M155 136c-5-38 20-62 54-57 4 34-15 56-54 57Z" class="petal"/><path d="M83 304c34-15 57-37 77-69M119 222c29-8 55-24 76-49M151 151c30-9 53-22 75-42"/><g><circle cx="261" cy="135" r="9"/><circle cx="261" cy="118" r="8" class="petal"/><circle cx="277" cy="130" r="8" class="petal"/><circle cx="271" cy="148" r="8" class="petal"/><circle cx="252" cy="149" r="8" class="petal"/><circle cx="245" cy="131" r="8" class="petal"/></g></svg>
+<svg class="ambient bottom" viewBox="0 0 320 420" aria-hidden="true"><path d="M25 392C82 315 108 236 136 150S204 41 295 17"/><path d="M78 318C35 304 23 264 50 238c39 10 50 40 28 80Z" class="petal"/><path d="M99 263c-4-42 24-68 59-62 6 37-13 62-59 62Z" class="petal"/><path d="M126 194c-43-6-58-38-40-72 38 3 59 31 40 72Z" class="petal"/><path d="M155 136c-5-38 20-62 54-57 4 34-15 56-54 57Z" class="petal"/><path d="M83 304c34-15 57-37 77-69M119 222c29-8 55-24 76-49M151 151c30-9 53-22 75-42"/><g><circle cx="261" cy="135" r="9"/><circle cx="261" cy="118" r="8" class="petal"/><circle cx="277" cy="130" r="8" class="petal"/><circle cx="271" cy="148" r="8" class="petal"/><circle cx="252" cy="149" r="8" class="petal"/><circle cx="245" cy="131" r="8" class="petal"/></g></svg>
+<main class="app">
+  <section class="copy">
+    <div class="brand"><img src="./icon.svg" alt="شعار لورين"></div>
+    <p class="eyebrow">LOREEN MEDICAL CLINIC</p>
+    <h1 class="title">لفّي واربح</h1>
+    <p class="subtitle">خصمك الحقيقي على الليزر</p>
+    <p class="tagline">لفّي العجلة بإيدك واكتشفي نصيبك<br>عناية تليق بجمالك… بشكل طبيعي</p>
+    <div class="gesture"><strong>اسحبي العجلة واتركيها تلفّ ✨</strong><span>المؤشر يحدد الخصم عند الوقوف — النتيجة من اللفة نفسها</span></div>
+    <p class="hint" id="hint" aria-live="polite">المسي العجلة واسحبيها لتبدأ اللفة</p>
+    <div class="trust" aria-label="فرص متساوية ونتيجة حسب مؤشر العجلة"><span class="trust-mark" aria-hidden="true">✓</span><p><strong>فرص متساوية وشفافة</strong><br>كل خصم له شريحة بنفس الحجم، والجائزة حسب مكان توقف المؤشر.</p></div>
+    <div class="notes"><strong>العرض خاص بخدمات الليزر</strong><br><span>باقة الجسم الكامل — ٤ جلسات</span><br><span class="base-price">السعر قبل الخصم: ١٠٠ د.أ</span></div>
+    <div class="controls"><button class="secondary" id="sound" type="button" aria-pressed="true">🔊 الصوت يعمل</button><button class="secondary" id="full" type="button">⛶ ملء الشاشة</button><button class="secondary" id="install" type="button" hidden>＋ تثبيت التطبيق</button></div>
+  </section>
+  <section class="wheel-side" aria-label="عجلة لورين">
+    <div class="wheelbox" id="wheelbox" tabindex="0" aria-describedby="wheelHelp" aria-label="عجلة خصومات من ٢٠ إلى ٥٠ بالمئة. اسحبيها بيدك.">
+      <span class="pointer" aria-hidden="true"></span>
+      <svg id="wheel" class="wheel" viewBox="0 0 500 500" role="img" aria-label="سبع شرائح متساوية: خصم ٢٠، ٢٥، ٣٠، ٣٥، ٤٠، ٤٥، و٥٠ بالمئة">
+        <defs><radialGradient id="hub"><stop stop-color="#fffdf7"/><stop offset=".79" stop-color="#f1e4d3"/><stop offset="1" stop-color="#bb9255"/></radialGradient><linearGradient id="gold"><stop stop-color="#f5e4c1"/><stop offset=".46" stop-color="#a7793b"/><stop offset="1" stop-color="#f6e8ca"/></linearGradient><linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".22"/><stop offset=".46" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#49333b" stop-opacity=".12"/></linearGradient></defs>
+        <circle cx="250" cy="250" r="245" fill="url(#gold)"/><circle cx="250" cy="250" r="236" fill="#fff8ed"/>
+        <g id="segments"></g><circle cx="250" cy="250" r="236" fill="none" stroke="#bd965a" stroke-width="4"/><circle cx="250" cy="250" r="220" fill="none" stroke="#ead3a7" stroke-width="1.7"/>
+        <g id="studs"></g><circle cx="250" cy="250" r="60" fill="url(#hub)" stroke="#a97c41" stroke-width="4"/><circle cx="250" cy="250" r="51" fill="none" stroke="#e2c998" stroke-width="1.5"/><image href="./icon.svg" x="211" y="210" width="78" height="78"/><circle cx="250" cy="250" r="236" fill="url(#shade)" pointer-events="none"/>
+      </svg>
+      <span class="wheel-caption" id="wheelHelp">حرّكي العجلة بيدك — كل الشرائح بنفس الحجم</span>
+    </div>
+  </section>
+</main>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="won">
+  <div class="result"><div class="small">LOREEN MEDICAL CLINIC</div><h2 id="won">مبروك! هذا خصمك من لورين</h2><div class="discount" id="discountBig">٢٠٪</div><p class="result-intro">هذه هي الشريحة التي توقف عندها المؤشر<br>خصمك على باقة الجسم الكامل — ٤ جلسات ليزر</p>
+    <div class="pricecard"><div class="price-row"><span>السعر قبل الخصم</span><strong id="beforePrice">١٠٠ د.أ</strong></div><div class="price-row"><span>نسبة الخصم</span><strong id="discount">٢٠٪</strong></div><div class="price-row final"><span>السعر بعد الخصم</span><strong id="finalPrice">٨٠ د.أ</strong></div></div>
+    <p class="fairness-note">النتيجة مثبتة من زاوية توقف العجلة. كل نسبة لها شريحة متساوية.</p><button class="spinbtn" id="again" type="button">إغلاق</button><div class="footer">ENHANCING YOU, NATURALLY</div>
+  </div>
+</div>
+<script>
+"use strict";
+const prizes=[20,25,30,35,40,45,50];
+const segmentAngle=360/prizes.length;
+const colors=["#f5ebdd","#ad747b","#dfc6a8","#80686e","#f9f1e5","#d0aa6c","#aa7379"];
+const textColors=["#613f38","#fff8ef","#604338","#fff8ef","#613f38","#563d20","#fff8ef"];
+const svgNS="http://www.w3.org/2000/svg";
+const group=document.querySelector("#segments"),studs=document.querySelector("#studs");
+const wheel=document.querySelector("#wheel"),wheelbox=document.querySelector("#wheelbox"),hint=document.querySelector("#hint"),overlay=document.querySelector("#overlay");
+const sectors=[];
+function polar(radius,angle){const t=(angle-90)*Math.PI/180;return [250+radius*Math.cos(t),250+radius*Math.sin(t)]}
+function wrap(angle){return ((angle%360)+360)%360}
+function normDelta(angle){return ((angle+540)%360)-180}
+function numberAr(value){return value.toLocaleString("ar-JO")}
+prizes.forEach(function(prize,index){
+  const start=index*segmentAngle,end=(index+1)*segmentAngle,mid=(start+end)/2;
+  sectors.push({prize:prize,start:start,end:end});
+  const p1=polar(228,start),p2=polar(228,end),path=document.createElementNS(svgNS,"path");
+  path.setAttribute("d","M 250 250 L "+p1[0]+" "+p1[1]+" A 228 228 0 0 1 "+p2[0]+" "+p2[1]+" Z");
+  path.setAttribute("fill",colors[index]);path.setAttribute("stroke","#c5a16a");path.setAttribute("stroke-width","2.3");group.appendChild(path);
+  const point=polar(151,mid),label=document.createElementNS(svgNS,"text");
+  label.setAttribute("x",point[0]);label.setAttribute("y",point[1]);label.setAttribute("text-anchor","middle");label.setAttribute("dominant-baseline","central");label.setAttribute("font-family","Tahoma,Arial,sans-serif");label.setAttribute("font-weight","800");label.setAttribute("font-size","31");label.setAttribute("fill",textColors[index]);label.textContent=numberAr(prize)+"٪";group.appendChild(label);
+  const studPoint=polar(228,start),stud=document.createElementNS(svgNS,"circle");
+  stud.setAttribute("cx",studPoint[0]);stud.setAttribute("cy",studPoint[1]);stud.setAttribute("r","5.3");stud.setAttribute("fill","#fff3d8");stud.setAttribute("stroke","#a77b3e");stud.setAttribute("stroke-width","1.7");studs.appendChild(stud)
+});
+let current=-segmentAngle/2,busy=false,drag=null,soundOn=true,audioContext=null,lastTickIndex=0;
+wheel.style.transform="rotate("+current+"deg)";
+function sectorAtPointer(){const angle=wrap(-current);for(let i=0;i<sectors.length;i++){if(angle>=sectors[i].start&&angle<sectors[i].end)return i}return sectors.length-1}
+function vibrate(pattern){if(typeof navigator!=="undefined"&&typeof navigator.vibrate==="function"){try{navigator.vibrate(pattern)}catch{}}}
+function tone(frequency,duration,volume,delay){
+  if(!soundOn)return;
+  try{
+    audioContext=audioContext||(new(window.AudioContext||window.webkitAudioContext)());
+    if(audioContext.state==="suspended")audioContext.resume().catch(function(){});
+    const start=audioContext.currentTime+(delay||0),oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
+    oscillator.type="sine";oscillator.frequency.setValueAtTime(frequency,start);
+    gain.gain.setValueAtTime(volume,start);gain.gain.exponentialRampToValueAtTime(.001,start+duration);
+    oscillator.connect(gain);gain.connect(audioContext.destination);oscillator.start(start);oscillator.stop(start+duration)
+  }catch{}
+}
+function clickSound(speed){tone(730+Math.min(220,Math.abs(speed)*105),.027,.028,0)}
+function tickFeedback(speed){
+  const index=sectorAtPointer();
+  if(index===lastTickIndex)return;
+  lastTickIndex=index;
+  vibrate(9);
+  wheelbox.classList.remove("bump");void wheelbox.offsetWidth;wheelbox.classList.add("bump");
+  clickSound(speed)
+}
+function setWheel(speed){wheel.style.transform="rotate("+current+"deg)";tickFeedback(speed||0)}
+function showResult(){
+  const prize=sectors[sectorAtPointer()].prize,priceBefore=100,priceAfter=Math.round(priceBefore*(100-prize)/100);
+  const discountText=numberAr(prize)+"٪",priceText=numberAr(priceAfter)+" د.أ";
+  document.querySelector("#discountBig").textContent=discountText;
+  document.querySelector("#discount").textContent=discountText;
+  document.querySelector("#beforePrice").textContent=numberAr(priceBefore)+" د.أ";
+  document.querySelector("#finalPrice").textContent=priceText;
+  overlay.classList.add("show");vibrate([34,24,62]);tone(523,.14,.065,0);tone(659,.16,.06,.105);tone(784,.25,.06,.22);
+  hint.textContent="ثبتت النتيجة على الخصم الذي توقف عنده المؤشر"
+}
+function finishSpin(){
+  busy=false;current=wrap(current);wheel.style.transform="rotate("+current+"deg)";showResult()
+}
+function startInertia(speed){
+  busy=true;hint.textContent="العجلة تلفّ…";
+  vibrate([14,12,20]);tone(420,.065,.045,0);
+  let velocity=speed,previous=performance.now();
+  function frame(now){
+    const dt=Math.min(40,now-previous);previous=now;
+    current+=velocity*dt;setWheel(velocity);
+    velocity*=Math.exp(-dt/1320);
+    if(Math.abs(velocity)>.011)requestAnimationFrame(frame);else finishSpin()
+  }
+  requestAnimationFrame(frame)
+}
+function pointerAngle(event){
+  const rect=wheel.getBoundingClientRect(),cx=rect.left+rect.width/2,cy=rect.top+rect.height/2;
+  return Math.atan2(event.clientY-cy,event.clientX-cx)*180/Math.PI
+}
+wheelbox.addEventListener("pointerdown",function(event){
+  if(busy||overlay.classList.contains("show"))return;
+  const angle=pointerAngle(event),now=performance.now();
+  drag={id:event.pointerId,lastAngle:angle,lastTime:now,velocity:0,total:0,travel:0,lastX:event.clientX,lastY:event.clientY};
+  wheelbox.setPointerCapture(event.pointerId);wheelbox.classList.add("dragging");
+  tone(460,.035,.025,0);hint.textContent="اسحبي بسرعة ثم اتركي العجلة تكمل دورتها"
+});
+wheelbox.addEventListener("pointermove",function(event){
+  if(!drag||event.pointerId!==drag.id)return;
+  const now=performance.now(),angle=pointerAngle(event),delta=normDelta(angle-drag.lastAngle),dt=Math.max(1,now-drag.lastTime);
+  drag.total+=delta;drag.travel+=Math.hypot(event.clientX-drag.lastX,event.clientY-drag.lastY);
+  const sample=delta/dt;drag.velocity=drag.velocity*.3+sample*.7;
+  drag.lastX=event.clientX;drag.lastY=event.clientY;drag.lastAngle=angle;drag.lastTime=now;
+  current+=delta;setWheel(drag.velocity)
+});
+function releaseDrag(event){
+  if(!drag||event.pointerId!==drag.id)return;
+  const ended=drag;drag=null;wheelbox.classList.remove("dragging");
+  if(wheelbox.hasPointerCapture(event.pointerId))wheelbox.releasePointerCapture(event.pointerId);
+  if(ended.travel<12||Math.abs(ended.total)<8){hint.textContent="اسحبي العجلة أبعد أو أسرع لتبدأ اللفة";return}
+  startInertia(Math.max(-1.8,Math.min(1.8,ended.velocity)))
+}
+wheelbox.addEventListener("pointerup",releaseDrag);
+wheelbox.addEventListener("pointercancel",function(){drag=null;wheelbox.classList.remove("dragging")});
+wheelbox.addEventListener("contextmenu",function(event){event.preventDefault()});
+document.querySelector("#again").addEventListener("click",function(){overlay.classList.remove("show")});
+overlay.addEventListener("click",function(event){if(event.target===overlay)overlay.classList.remove("show")});
+document.addEventListener("keydown",function(event){if(event.key==="Escape")overlay.classList.remove("show")});
+document.querySelector("#sound").addEventListener("click",function(event){
+  soundOn=!soundOn;event.currentTarget.textContent=soundOn?"🔊 الصوت يعمل":"🔇 الصوت مغلق";event.currentTarget.setAttribute("aria-pressed",String(soundOn));
+  if(soundOn)tone(700,.06,.04,0)
+});
+document.querySelector("#full").addEventListener("click",async function(){
+  try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen()}
+  catch{hint.textContent="لأفضل عرض، اختاري ملء الشاشة من إعدادات المتصفح"}
+});
+let installPrompt;
+window.addEventListener("beforeinstallprompt",function(event){event.preventDefault();installPrompt=event;document.querySelector("#install").hidden=false});
+document.querySelector("#install").addEventListener("click",async function(){
+  if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}
+  else hint.textContent="على iPad: اضغطي مشاركة ثم إضافة إلى الشاشة الرئيسية"
+});
+if("serviceWorker"in navigator)window.addEventListener("load",function(){navigator.serviceWorker.register("./sw.js").catch(function(){})});
+if("wakeLock"in navigator){
+  let screenLock;
+  const keepScreenAwake=async function(){try{screenLock=await navigator.wakeLock.request("screen")}catch{}};
+  keepScreenAwake();document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")keepScreenAwake()})
+}
+</script>
+</body>
+</html>
